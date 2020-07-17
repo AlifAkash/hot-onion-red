@@ -1,0 +1,25 @@
+.FoodNav{
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 3px rgba(248, 177, 198, 0.719);
+}
+
+.FoodNav a{
+    text-decoration: none;
+    color: rgba(250, 6, 79, 0.719);
+    margin: 10px 30px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.FoodNav a:hover{
+    background-color: rgba(252, 44, 106, 0.719);
+    color: white;
+    opacity: 0.8;
+    box-shadow: 2px 3px 2px rgba(248, 177, 198, 0.719);
+}

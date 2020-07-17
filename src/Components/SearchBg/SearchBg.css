@@ -1,0 +1,44 @@
+.SearchBg{
+    height: 70vh;
+    background: url('../../hot-onion-restaurant-resources/bannerbackground.png') center/cover no-repeat;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SearchBg button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    color: whitesmoke;
+    background-color: rgba(250, 6, 79, 0.719);
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 3px solid gray;
+}
+
+.SearchBg button:hover{
+    box-shadow: 0 0 10px rgba(250, 6, 79, 0.719);
+    background-color: whitesmoke;
+    color: rgba(250, 6, 79, 0.719);
+}
+
+.SearchBg button:active{
+    background-color: rgba(250, 6, 79, 0.719);
+    color: white;
+}
+
+input{
+    width: 250px;
+    height: 25px;
+    border-radius: 8px;
+    outline: none;
+    border: 3px solid gray;
+    font-size: 1rem;
+}
+
+input:hover{
+    box-shadow: 0 0 10px #88d5e9;
+}
