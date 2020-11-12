@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LunchItems.css';
-import Lunch from '../FakeData/Lunch'
-import { useEffect } from 'react';
-// import fakeData from '../FakeData';
+import fakeData from '../FakeData/FakeData';
+import Lunches from '../Lunches/Lunches';
 
 const LunchItems = () => {
-    const items = [...Lunch];
-    const [lunch,setLunch] = useEffect(items);
-    console.log(lunch);
+    const items = fakeData.filter(fd=> fd.categories === "lunch");
+    const [lunches,setLunches] = useState(items);
     return (
         <div>
-            <h1>This is lunch</h1>
-            {/* <p>{lunch.length}</p> */}
+            <div className="items-container">
+                {
+                    lunches.map(lnch => <Lunches lunches={lnch}></Lunches>)
+                }
+            </div>
         </div>
     );
 };

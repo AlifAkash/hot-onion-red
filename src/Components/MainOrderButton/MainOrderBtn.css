@@ -1,0 +1,14 @@
+.MainOrderBtn{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainBtn{
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 1rem;
+}

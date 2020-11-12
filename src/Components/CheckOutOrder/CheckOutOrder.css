@@ -1,0 +1,21 @@
+.CheckOut{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+.button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(250, 6, 79, 0.719);
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid whitesmoke;
+}
