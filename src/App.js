@@ -17,14 +17,22 @@ import BreakfastItems from './Components/BreakfastItems/BreakfastItems';
 import FoodDetails from './Components/FoodDetails/FoodDetails';
 import { createContext } from 'react';
 import CheckOutOrder from './Components/CheckOutOrder/CheckOutOrder';
+import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
+import Footer from './Components/Footer/Footer';
+import Login from './Components/Login/Login';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const cartContext = createContext();
+
+export const userContext = createContext();
 
 function App() {
 
   const [foodCart, setFoodCart] = useState([]);
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <div className="App">
+      <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <cartContext.Provider value={[foodCart, setFoodCart]}>
       <Router>
         <Header></Header>
@@ -46,16 +54,22 @@ function App() {
           <Route path="/foodDetail/:foodKey">
             <FoodDetails></FoodDetails>
           </Route>
-          <Route path="/checkOutOrder">
-            <CheckOutOrder></CheckOutOrder>
+          <Route path="/login">
+            <Login></Login>
           </Route>
+          <PrivateRoute path="/checkOutOrder">
+            <CheckOutOrder></CheckOutOrder>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
         </Switch>
         <MainOrderBtn></MainOrderBtn>
+        <WhyChooseUs></WhyChooseUs>
+        <Footer></Footer>
       </Router>
       </cartContext.Provider>
+      </userContext.Provider>
     </div>
   );
 }

@@ -16,7 +16,6 @@ const FoodDetails = () => {
 
     const addCartHandler = (foodDetail) => {
         const newFoodDetail = {...foodDetail, newPrice}
-        console.log(newFoodDetail);
         const newFoodCart = [...foodCart, newFoodDetail];
         setFoodCart(newFoodCart);
     }
@@ -39,6 +38,8 @@ const FoodDetails = () => {
         newPrice = count * price;
     }
 
+    const NEWPRICE = newPrice.toFixed(2);
+
     return (
         <div className="FoodDetails">
 
@@ -50,7 +51,7 @@ const FoodDetails = () => {
 
                     <div>
                         {
-                            newPrice>price ? <h2>${newPrice}</h2> : <h2>${price}</h2>
+                            newPrice>price ? <h2>${NEWPRICE}</h2> : <h2>${price}</h2>
                         }
                     </div>
 
@@ -73,6 +74,7 @@ const FoodDetails = () => {
                 </div>
 
                 <button
+                    disabled={count < 1 ? true : false}
                     onClick={() => addCartHandler(foodDetail)}
                     className="cartAddBtn">
                     <FontAwesomeIcon className="iconBtn" icon={faUtensils} />

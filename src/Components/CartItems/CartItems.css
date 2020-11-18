@@ -1,0 +1,24 @@
+.cartItemsReview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid orangered;
+    margin-bottom: 5px;
+}
+
+.cartItemsReview img{
+    height: 100px;
+    width: auto;
+}
+
+.cartItemsReview button{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(250, 6, 79, 0.719);
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid whitesmoke;
+}

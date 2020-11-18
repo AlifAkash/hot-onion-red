@@ -3,8 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../hot-onion-restaurant-resources/logo2.png';
 import './Header.css';
+import { Link, useHistory } from 'react-router-dom';
 
 const Header = () => {
+    const history = useHistory()
+    const handleLog = () => {
+        history.replace("/login");
+    }
     return (
         <div className="Header">
             <div className="logo-container">
@@ -12,8 +17,8 @@ const Header = () => {
             </div>
             <div className="cart-logIn-logOut-container">
                 <FontAwesomeIcon className="icon" icon={faUtensils} />
-                <button>Log in</button>
-                <button>Log out</button>
+                <button onClick={handleLog}>Log in</button>
+                <button onClick={handleLog}>Log out</button>
             </div>
         </div>
     );

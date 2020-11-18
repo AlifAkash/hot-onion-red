@@ -87,3 +87,9 @@
     background-color: rgba(250, 6, 79, 0.719);
     color: white;
 }
+
+.cartAddBtn:disabled{
+   background-color: whitesmoke;
+   box-shadow: inherit;
+   color: inherit;
+}

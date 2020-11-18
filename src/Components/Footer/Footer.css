@@ -1,0 +1,41 @@
+.Footer{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: whitesmoke;
+    padding: 0rem 1rem;
+}
+
+.lowerContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding-right: 3rem;
+}
+
+.lowerFirst{
+    margin: 10px;
+}
+
+.lowerSecond{
+    margin: 10px;
+}
+
+.upperContainer img{
+    height: 50px;
+    width: auto;
+}
+
+.upperContainer{
+    padding-left: 2rem;
+}
+
+.upperText{
+    display: flex;
+}
+
+.upperSecond{
+    align-items: flex-start;
+}
